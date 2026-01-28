@@ -11,10 +11,10 @@ export default function MyHeader() {
 
     return (
         <header>
-            <nav>
-                <ul>
+            <nav className="bg-primary-subtle">
+                <ul className="d-flex gap-3">
                     {links.map((link, index) => (
-                        <li key={index}>
+                        <li key={index} className="text-dark">
                             <NavLink to={link.path}>
                                 {link.label}
                             </NavLink>
