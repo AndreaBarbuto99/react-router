@@ -5,3 +5,8 @@ li {
 .active {
     background-color: yellow;
 }
+
+a {
+    text-decoration: none !important;
+    color: black !important;
+}
