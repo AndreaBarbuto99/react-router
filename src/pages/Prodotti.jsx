@@ -21,7 +21,7 @@ export default function Prodotti() {
 
     return (
         <>
-            <div className="container row">
+            <div className="container m-auto p-0 mb-4 row">
                 {products.map((product) => (
 
                     < Prodotto

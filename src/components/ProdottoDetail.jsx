@@ -7,18 +7,19 @@ export default function ProdottoDetail(props) {
     const { image, title, category, description, price } = props.prodotto
 
     return (
-        < div className="container col-4" >
-            <figure>
+        < div className="only-product container col-4 border-3 border-primary-subtle bg-secondary-subtle mb-4" >
+            <figure className="my-figure-detail">
                 <img className="img-fluid" src={image} alt={title} />
             </figure>
-            <figcaption>
+            <figcaption className="mb-4">
                 <div className="text-end"><i>{category}</i></div>
                 <h4>Description</h4>
                 <p>{description}</p>
-                <span className="text-danger fw-bold">{price}</span>
+                <span className="text-danger fw-bold">{price} €</span>
             </figcaption>
-
-            <Link to="/prodotti" className="btn btn-primary">Torna alla pagina dei prodotti</Link>
+            <div className="d-flex justify-content-end">
+                <Link to="/prodotti" className="btn btn-primary text-end">Torna alla pagina dei prodotti</Link>
+            </div>
         </div >
     )
 }

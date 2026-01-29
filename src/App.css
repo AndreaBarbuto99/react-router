@@ -14,3 +14,44 @@ a {
 .detail-title {
     margin-right: 100px;
 }
+
+img {
+    height: 250px !important;
+    object-fit: fill;
+    object-position: center center;
+}
+
+.my-nav {
+    height: 50px;
+}
+
+.my-list {
+    margin-right: 150px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.my-figure {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    height: 250px;
+}
+
+.my-figure-detail {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.only-product {
+    border: 3px solid blue;
+    padding-bottom: 20px;
+}

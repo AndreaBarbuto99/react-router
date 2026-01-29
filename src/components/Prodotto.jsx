@@ -7,8 +7,8 @@ export default function Prodotto({ product }) {
 
     return (
 
-        < div className="card col-4" >
-            <figure>
+        < div className="card border border-3 border-primary-subtle col-4 bg-secondary-subtle" >
+            <figure className="my-figure">
                 <img className="img-fluid" src={image} alt={title} />
             </figure>
             <figcaption>
@@ -16,7 +16,7 @@ export default function Prodotto({ product }) {
                 <div className="text-end"><i>{category}</i></div>
                 <h4>Description</h4>
                 <p>{description}</p>
-                <span className="text-danger fw-bold">{price}</span>
+                <span className="text-danger fw-bold">{price} €</span>
             </figcaption>
         </div >
     )
