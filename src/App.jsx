@@ -5,6 +5,7 @@ import Homepage from './pages/Homepage'
 import ChiSiamo from './pages/ChiSiamo'
 import Prodotti from './pages/Prodotti'
 import ProdottoDetailPage from './pages/ProdottoDetailPage'
+import NotFound404 from './pages/NotFound404'
 
 function App() {
 
@@ -18,9 +19,10 @@ function App() {
                     <Route path='/prodotti'>
                         <Route index element={<Prodotti />} />
                         <Route path=':id' element={<ProdottoDetailPage />} />
-
                     </Route>
                 </Route>
+                <Route path='/notfound' element={<NotFound404 />} />
+                <Route path='*' element={<NotFound404 />} />
             </Routes>
 
         </BrowserRouter >
