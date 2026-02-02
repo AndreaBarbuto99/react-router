@@ -12,6 +12,7 @@ export default function ProdottoDetail(props) {
                 <img className="img-fluid" src={image} alt={title} />
             </figure>
             <figcaption className="mb-4">
+                <h3>{title}</h3>
                 <div className="text-end"><i>{category}</i></div>
                 <h4>Description</h4>
                 <p>{description}</p>

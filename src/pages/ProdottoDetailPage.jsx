@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 
 import ProdottoDetail from "../components/ProdottoDetail";
-import NotFound404 from "./NotFound404";
+
 
 const endpointFirst = "https://fakestoreapi.com/products/"
 
@@ -13,6 +13,7 @@ export default function ProdottoDetailPage() {
     const { id } = useParams();
     const [prodotto, setProdotto] = useState([]);
     const navigate = useNavigate();
+
 
     useEffect(() => {
         axios.get(endpointFirst + id)
@@ -25,14 +26,18 @@ export default function ProdottoDetailPage() {
 
     if (!prodotto || !prodotto.id) {
         navigate("/notfound");
-        return <div>Caricamento...</div>;
+        return <div>Loading...</div>;
     }
+
+
+
     return (
         <>
             <h3 className="detail-title text-center">Prodotto in dettaglio:</h3>
             <ProdottoDetail
                 key={prodotto.id}
                 prodotto={prodotto} />
+
         </>
     )
 }

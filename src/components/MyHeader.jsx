@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom"
+import { useBudget } from "../contexts/BudgetProvider";
 
 
 export default function MyHeader() {
@@ -8,6 +9,8 @@ export default function MyHeader() {
         { path: "/chisiamo", label: "Chi siamo" },
         { path: "/prodotti", label: "Prodotti" }
     ];
+
+    const { budgetMode, setBudgetMode } = useBudget();
 
     return (
         <header className="rounded mb-5">
@@ -24,7 +27,9 @@ export default function MyHeader() {
                         </li>
                     ))}
                 </ul>
-                <i></i>
+                <button className="btn btn-primary btn-sm me-3 w-2" onClick={() => setBudgetMode(!budgetMode)}>
+                    {budgetMode ? "Disattiva modalità budget" : "Attiva modalità budget"}
+                </button>
             </nav>
         </header>
     )
